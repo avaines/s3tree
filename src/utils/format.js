@@ -1,5 +1,4 @@
-const chalk = require('chalk');
-const yaml = require('yaml'); // Add this at the top
+const yaml = require('yaml');
 
 // Build a nested tree from flat S3 keys
 function buildTree(items, directoriesOnly = false) {
@@ -90,9 +89,9 @@ function printTree(
             if (showDate && child.__file.lastModified) {
                 dateStr = ` (${new Date(child.__file.lastModified).toISOString()})`;
             }
-            output += `${prefix}${pointer}${chalk.reset(displayName)}${sizeStr}${dateStr}\n`;
+            output += `${prefix}${pointer}${displayName}${sizeStr}${dateStr}\n`;
         } else {
-            output += `${prefix}${pointer}${chalk.blue(displayName)}\n`;
+            output += `${prefix}${pointer}${displayName}\n`;
             // Only recurse if maxDepth is not set or we haven't reached it yet
             // AND fileLimit is not set or we haven't exceeded it
             if (
@@ -112,7 +111,7 @@ function printTree(
                     fileLimit
                 );
             } else if (fileLimit !== undefined && Object.keys(child).length > fileLimit) {
-                output += `${nextPrefix}${chalk.gray(`[file-limit ${fileLimit} exceeded]`)}\n`;
+                output += `${nextPrefix}[file-limit ${fileLimit} exceeded]\n`;
             }
         }
     });
