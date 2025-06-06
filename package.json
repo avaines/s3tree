@@ -1,6 +1,6 @@
 {
   "name": "s3tree-cli",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "A CLI tool to list contents of S3 buckets in a tree-like format.",
   "main": "src/index.js",
   "bin": {

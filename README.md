@@ -20,19 +20,9 @@ A CLI tool to list contents of S3 buckets in a tree-like format, similar to the 
 
 ## Installation
 
-**Global install from local repo:**
-
 ```bash
-npm install -g .
+npm install -g s3tree-cli
 ```
-
-or, from the parent directory:
-
-```bash
-npm install -g ./s3tree-cli
-```
-
----
 
 ## Usage
 
@@ -43,7 +33,7 @@ s3tree [options] <bucket-name>
 **Example:**
 
 ```bash
-s3tree my-bucket -d -f --region eu-west-1
+s3tree my-bucket -d -f --region eu-west-2
 ```
 
 ---
